@@ -1,3 +1,5 @@
+"""
+the solution i provided before failed at test cases here is the new solution provided below for the problem
 class Solution(object):
     def removeElement(self, nums, val):
         count=0
@@ -11,3 +13,13 @@ class Solution(object):
                 count+=1
             l+=1
         return (len(nums)-1-count)
+"""
+
+class Solution(object):
+    def removeElement(self, nums, val):
+        i=0
+        for j in range(len(nums)):
+            if nums[j]!=val:
+                nums[i]=nums[j]
+                i+=1
+        return i
